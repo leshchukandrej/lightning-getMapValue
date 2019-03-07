@@ -11,6 +11,6 @@ Example of using this component:
 </c:getMapValue>
 ```
 
-This component has handlers that checks if map or key was changed and reload value for specific map.
+This component has handlers that checks if map or key was changed and reloads value for specific map.
 
 ###  Attention!!! When you change value, received from map by key, it won't change value in map. You should do it manualy. 
