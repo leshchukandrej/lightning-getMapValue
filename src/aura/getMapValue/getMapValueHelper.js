@@ -13,7 +13,7 @@
     fetchValue: function (map, key) {
         let value;
         if (map && key) {
-            if (map.get) {
+            if (map instanceof Map) {
                 value = map.get(key);
             } else {
                 value = map[key];
