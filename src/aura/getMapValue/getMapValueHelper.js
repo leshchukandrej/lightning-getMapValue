@@ -11,7 +11,7 @@
         let value = this.fetchValue(map, key);
         
         if (JSON.stringify(value) != JSON.stringify(oldValue)) {
-            component.set('v.returnValues', []);
+            component.set('v.returnValues', [value]);
         }
     },
 
