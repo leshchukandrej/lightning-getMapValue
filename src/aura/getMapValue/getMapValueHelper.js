@@ -7,11 +7,19 @@
         let map = component.get('v.map');
         let key = component.get('v.key');
 
-        if (map && key) {
-            component.set('v.returnValues', [component.getReference('v.map[' + key + ']')]);
-        } else {
-            component.set('v.returnValues', []);
-        }
+        component.set('v.returnValues', [this.fetchValue(map, key)]);
     },
+
+    fetchValue: function (map, key) {
+        let value;
+        if (map && key) {
+            if (map.get) {
+                value = map.get(key);
+            } else {
+                value = map[key];
+            }
+        }
+        return value;
+    }
 
 })
