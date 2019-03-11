@@ -1,0 +1,26 @@
+<!--
+ - Created by Andrii Leshchuk on 04.03.2019.
+ -->
+
+<aura:component description="getMapValue">
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <aura:handler name="change" value="{!v.map}" action="{!c.doInit}"/>
+    <aura:handler name="change" value="{!v.key}" action="{!c.doInit}"/>
+
+    <aura:attribute name="body" type="Aura.componentDefRef[]"/>
+
+    <aura:attribute name="map" type="Map" access="public"/>
+    <aura:attribute name="key" type="String" access="public"/>
+    <aura:attribute name="var" type="String" access="public"/>
+
+    <aura:attribute name="returnValues" type="Object[]" access="private"/>
+
+    <aura:iteration items="{!v.returnValues}" var="{!v.var}" template="{!v.body}" aura:id="iteration">
+
+        i
+
+    </aura:iteration>
+
+</aura:component>
